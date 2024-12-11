@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/styles.dart';
+import '../widgets/drawer_widget.dart';
 
 class OptionsPage extends StatelessWidget {
   @override
@@ -8,6 +9,7 @@ class OptionsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Opciones'),
       ),
+      drawer: AppDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

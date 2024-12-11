@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/styles.dart';
+import '../widgets/drawer_widget.dart';
 
 class RegisterPage extends StatelessWidget {
   @override
@@ -8,6 +9,7 @@ class RegisterPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Registro'),
       ),
+      drawer: AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

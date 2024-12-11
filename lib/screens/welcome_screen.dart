@@ -1,33 +1,23 @@
 import 'package:flutter/material.dart';
-import '../utils/styles.dart';
+import '../widgets/drawer_widget.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Bienvenida'),
-      ),
+      appBar: AppBar(title: Text('Bienvenida')),
+      drawer: AppDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              '¡Bienvenido a nuestra aplicación!',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            ),
+            Text('¡Bienvenido a la App!', style: TextStyle(fontSize: 24)),
             SizedBox(height: 20),
             ElevatedButton(
-              style: customButtonStyle,
-              onPressed: () => Navigator.pushNamed(context, '/login'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              },
               child: Text('Iniciar Sesión'),
-            ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              style: customButtonStyle,
-              onPressed: () => Navigator.pushNamed(context, '/register'),
-              child: Text('Registrarse'),
             ),
           ],
         ),

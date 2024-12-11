@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/drawer_widget.dart';
 
 class ProjectDescriptionPage extends StatelessWidget {
   @override
@@ -7,6 +8,7 @@ class ProjectDescriptionPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Descripción del Proyecto'),
       ),
+      drawer: AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Text(
